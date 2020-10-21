@@ -26,15 +26,17 @@ function calculateAll() {
   let cartProducts = document.getElementsByClassName("product");
   console.log(cartProducts);
   let cartProductsArray = [...cartProducts];
+  let total= 0;
 
-  let finalValue = document.getElementsByClassName("total-value span");
 
   cartProductsArray.forEach((item) => {
-    updateSubtotal(item);
+   total+= updateSubtotal(item);
   
+  document.querySelector("#total-value span").innerHTML = total;
   });
-
 }
+
+
 
 // ITERATION 4
 
